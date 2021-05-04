@@ -9,7 +9,10 @@
     "test": "karma start"
   },
   "keywords": [],
-  "author": ["adhe.hanasa@gmail.com", "@dicoding"],
+  "author": [
+    "adhe.hanasa@gmail.com",
+    "@dicoding"
+  ],
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.5",
@@ -35,6 +38,7 @@
     "whatwg-fetch": "^3.2.0"
   },
   "dependencies": {
+    "bootstrap-icons": "^1.4.1",
     "regenerator-runtime": "^0.13.5"
   }
 }
