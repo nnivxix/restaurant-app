@@ -14,4 +14,20 @@ myBody.addEventListener('click', e => {
 	menu.classList.remove('open');
 	e.stopPropagation()
 })
-console.log(myBody)
+
+//import data from '../DATA.json'
+//console.log(data)
+
+const getRest = () => {
+	fetch("http://localhost:3000/restaurants")
+	.then(res => {
+		return res.json();
+	})
+	.then(data => {
+		console.log(data)
+	})
+	.catch( err => {
+		console.log(err)
+	})
+}
+getRest()

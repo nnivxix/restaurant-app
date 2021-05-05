@@ -12,26 +12,27 @@ nav{
 	position: absolute;
 	bottom: 0;
 	background: #8bc34a;
-	margin-block:0;
 }
 .mobile ul {
 	display: flex;
 	justify-content: space-around;
 	padding-inline: 0;
+	margin-block:0;
 }
 .mobile ul li {
-	padding: 20px;
+	padding: 10px;
 	list-style: none;
 }
 .mobile ul li a{
 	color: white;
 }
 .desktop{
-	padding: 1px;
+	padding: 1px 0;
 }
 .desktop h1{
 	text-align: center;
 	font-size: 1.9em;
+
 }
 .desktop ul{
 	display: none;
@@ -44,9 +45,36 @@ nav{
 	background: transparent;
 	border: none;
 }
-	.open{
+.open{
 		transform: translateX(10px) !important;
 	}
+
+/*hero*/
+.hero {
+	background: url("../public/images/heros/hero-image_2.jpg");
+  background-size:cover;
+  box-shadow:inset 0 0 0 2000px rgba(000, 0, 000, 0.3);
+	min-height: 80vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align:center;
+	color: white;
+}
+.hero h1{
+	font-size: 2em;
+}
+.hero h2{
+	font-size: 1.6em;
+	font-weight: 400;
+}
+.hero button{
+	font-size: 1.4em;
+  padding: 10px 15px;
+  border: none;
+}
+
 /*Tablet Mode*/
 @media (min-width: 768px){
 	.drawer{
@@ -65,10 +93,15 @@ nav{
 	.desktop .nav__list{
 		position: absolute;
 		z-index: 2;
-		transform: translateX(-250px);
+		transform: translateX(-100%);
 		display: block;
-    top: 60px;
+    top: 56px;
     transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    left: -10px;
+    padding-inline: 0;
+    background: white;
 	}
 	.desktop .nav__list li{
 		list-style: none;
@@ -82,6 +115,20 @@ nav{
 	.mobile{
 		display: none;
 	}
+
+	/*Hero*/
+	.hero h1{
+		font-size: 1.8em;
+	}
+	.hero h2{
+		font-size: 1.5em;
+	}
+	.hero button{
+		cursor: pointer;
+		font-size: 1.4em;
+	}
+
+
 }
 
 /*desktop mode*/
@@ -103,9 +150,12 @@ nav{
 		position: relative;
 		transform: translateX(0);
 		top: 0;
+		width: auto;
+		height: auto;
+
 	}
 	.desktop h1{
-		align-self: flex-start;
+		align-self: center;
 	}
 	.desktop .nav__list li {
 		display: inline-block;
@@ -122,6 +172,16 @@ nav{
 		text-decoration: none;
 		color: black;
 
+	}
+	/*Hero*/
+	.hero h1{
+		font-size: 3em;
+	}
+	.hero h2{
+		font-size: 2.5em;
+	}
+	.hero button{
+		cursor: pointer;
 	}
 
 
