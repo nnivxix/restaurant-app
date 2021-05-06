@@ -5,29 +5,17 @@ const btnDrawer = document.querySelector('.drawer')
 const menu = document.querySelector('.desktop ul');
 const myBody = document.body;
 
+//open menu
 btnDrawer.addEventListener('click', e => {
 	menu.classList.toggle('open');
 	e.stopPropagation()
 	console.log('masuk btnDrawer')
 })
+
+//close menu
 myBody.addEventListener('click', e => {
 	menu.classList.remove('open');
 	e.stopPropagation()
 })
 
-//import data from '../DATA.json'
-//console.log(data)
 
-const getRest = () => {
-	fetch("http://localhost:3000/restaurants")
-	.then(res => {
-		return res.json();
-	})
-	.then(data => {
-		console.log(data)
-	})
-	.catch( err => {
-		console.log(err)
-	})
-}
-getRest()
