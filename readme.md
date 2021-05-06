@@ -3,7 +3,8 @@
 - [x] Navbar
 - [x] Hero
 - [x] Cards
-- [] Footer
+- [x] Footer
 - [] Skip to Content
-- [] Favicon
+- [x] Favicon
+- [] Rendering cards
 - [] Functional on the keyboard

@@ -19,3 +19,7 @@ myBody.addEventListener('click', e => {
 })
 
 
+//get year
+let year = new Date().getFullYear();
+let captionYear = document.querySelector('.year');
+captionYear.textContent = year;

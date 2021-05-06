@@ -3,7 +3,7 @@ body{
 	margin: 0;
 	font-family: 'DM Sans', sans-serif;
 	box-sizing: border-box;
-	margin-bottom: 60px;
+	margin-bottom: 50px;
 	scroll-behavior: smooth;
 }
 nav{
@@ -103,8 +103,23 @@ nav{
 		background-color: #d8d6d63b;
     padding: 10px;
 	}
+	.caption .star{
+		color: #fdca40;
+	}
 	.catalogs .card img{
 		width: 100%;
+	}
+
+	/*footer*/
+	footer {
+		background-color: #f7a440;
+		color: #f6dcbf;
+		padding: 1em 0.7em;
+	}
+	footer p {
+		font-size: 1em;
+		font-weight: 700;
+		text-align: center;
 	}
 
 
@@ -116,6 +131,9 @@ nav{
 
 /*Tablet Mode*/
 @media (min-width: 768px){
+	body{
+		margin-bottom: 0;
+	}
 	.drawer{
 		display: block;
 	}
@@ -135,7 +153,7 @@ nav{
 		z-index: 2;
 		transform: translateX(-100%);
 		display: block;
-    top: 56px;
+    top: 49px;
     transition: transform 0.5s ease-in-out;
     width: 100%;
     height: 100vh;
@@ -191,6 +209,9 @@ nav{
 		background-color: #d8d6d63b;
     padding: 18px;
 	}
+	footer p{
+		font-size: 1.3em;
+	}
 }
 
 
@@ -200,6 +221,9 @@ nav{
 
 /*desktop mode*/
 @media (min-width: 1024px){
+	body{
+		margin-bottom: 0;
+	}
 	.mobile{
 		display: none;
 	}
@@ -266,6 +290,9 @@ nav{
 	.caption{
 		background-color: #d8d6d63b;
     padding: 10px;
+	}
+	footer p {
+		font-size: 1.4em;
 	}
 
 
