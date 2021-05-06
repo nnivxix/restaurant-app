@@ -6,5 +6,5 @@
 - [x] Footer
 - [] Skip to Content
 - [x] Favicon
-- [] Rendering cards
+- [x] Rendering cards
 - [] Functional on the keyboard
