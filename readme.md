@@ -1,10 +1,12 @@
 # Restaurant App
 
+
+## Submission 1
 - [x] Navbar
 - [x] Hero
 - [x] Cards
 - [x] Footer
-- [] Skip to Content
+- [x] Skip to Content
 - [x] Favicon
 - [x] Rendering cards
-- [] Functional on the keyboard
+- [x] Functional on the keyboard

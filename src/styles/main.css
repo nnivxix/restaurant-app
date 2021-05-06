@@ -6,6 +6,18 @@ body{
 	margin-bottom: 50px;
 	scroll-behavior: smooth;
 }
+
+.skip{
+	position: absolute;
+	top:-40px;
+	left: 0;
+	z-index: 3;
+}
+
+.skip:focus{
+	top:0;
+}
+
 nav{
 	width: 100%;
 }
@@ -95,12 +107,13 @@ nav{
 		text-align: center;
 	}
 	.card{
+		background-color: #f9f7f7;
 		box-shadow: 0px 2px 19px 0px rgba(82,79,79,0.54);
 		-webkit-box-shadow: 0px 2px 19px 0px rgba(82,79,79,0.17);
 		-moz-box-shadow: 0px 2px 19px 0px rgba(82,79,79,0.17);
 	}
 	.caption{
-		background-color: #d8d6d63b;
+		/*background-color: #d8d6d6;*/
     padding: 10px;
 	}
 	.caption .star{
@@ -115,6 +128,7 @@ nav{
 		background-color: #f7a440;
 		color: #f6dcbf;
 		padding: 1em 0.7em;
+		width: auto;
 	}
 	footer p {
 		font-size: 1em;
@@ -199,6 +213,7 @@ nav{
 		padding-left: 40px;
 		grid-column-start: 1;
 		grid-column-end: 3;
+		font-size: 2em;
 	}
 	.card{
 		box-shadow: 0px 2px 19px 0px rgba(82,79,79,0.54);

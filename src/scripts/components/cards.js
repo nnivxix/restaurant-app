@@ -1,7 +1,6 @@
 import data from '../../DATA.json';
 
 const restaurants = data.restaurants
-//console.log(restaurants)
 function cards() {
 	return restaurants.map( restaurant => {
 		 return`
@@ -14,6 +13,6 @@ function cards() {
 			</figcaption>
 		</figure>
 		`
-	}).join("")
+	}).join("") // removing comma in array https://stackoverflow.com/questions/63808858/removing-the-comma-from-the-end-of-a-template-string
 }
 export default cards
