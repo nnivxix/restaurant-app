@@ -8,11 +8,13 @@ function cards() {
 			<img src="${restaurant.pictureId}" alt="${restaurant.name}">
 			<figcaption class="caption">
 				<h1>${restaurant.name}</h1>
-				<p>Rating <span class="star">&#9733;</span> ${restaurant.rating}</p>
-				<p>Lokasi ${restaurant.city}</p>
+				<p class="rate">Rating <span class="star">&#9733;</span> ${restaurant.rating}</p>
+				<p class="city">Lokasi ${restaurant.city}</p>
+				<p class="desc">${restaurant.description}</p> 
 			</figcaption>
 		</figure>
 		`
 	}).join("") // removing comma in array https://stackoverflow.com/questions/63808858/removing-the-comma-from-the-end-of-a-template-string
 }
-export default cards
+export default cards 
+// elipsis the text using css https://css-tricks.com/snippets/css/truncate-string-with-ellipsis/

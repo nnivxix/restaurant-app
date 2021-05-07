@@ -9,4 +9,9 @@
 - [x] Skip to Content
 - [x] Favicon
 - [x] Rendering cards
-- [x] Functional on the keyboard
+- [x] Functional with the keyboard
+- [x] ***build*** ok
+
+## Submission 2
+- [] Our Story
+- [] Subscribe News Letter (promo)

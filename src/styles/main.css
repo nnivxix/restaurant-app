@@ -32,13 +32,17 @@ nav{
 	justify-content: space-around;
 	padding-inline: 0;
 	margin-block:0;
+	padding: 10px 0;
 }
 .mobile ul li {
-	padding: 10px;
+	padding: 0px;
 	list-style: none;
 }
 .mobile ul li a{
 	color: white;
+}
+.mobile ul li a svg{
+	padding: 10px;
 }
 .desktop{
 	padding: 1px 0;
@@ -116,9 +120,24 @@ nav{
 		/*background-color: #d8d6d6;*/
     padding: 10px;
 	}
+	.caption .rate{
+		font-size: 0.8em;
+		font-weight: 700;
+	}
+	.caption .city{
+		font-size: 0.9em;
+	}
+	.caption .desc{
+		/*min-width: 200px;*/
+		max-width: 250px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow:ellipsis;
+	}
 	.caption .star{
 		color: #fdca40;
 	}
+
 	.catalogs .card img{
 		width: 100%;
 	}
@@ -150,6 +169,7 @@ nav{
 	}
 	.drawer{
 		display: block;
+		padding: 5px;
 	}
 	.desktop{
 		display: flex;
