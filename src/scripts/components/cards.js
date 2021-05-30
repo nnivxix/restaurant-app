@@ -6,12 +6,12 @@ function cards() {
 	return restaurants.map( restaurant => {
 		 return`
 		<figure tabIndex="0" class="card">
-			<img src="${restaurant.pictureId}" alt="${restaurant.name}">
+			<img class="img_card" src="${restaurant.pictureId}" alt="${restaurant.name}">
 			<figcaption class="caption">
 				<h1>${restaurant.name}</h1>
 				<p class="rate">Rating <span class="star">&#9733;</span> ${restaurant.rating}</p>
 				<p class="city">Lokasi ${restaurant.city}</p>
-				<p class="desc">${restaurant.description.substring(0,100)}...</p> 
+				<p class="desc">${restaurant.description.substring(0,100)} ...</p> 
 			</figcaption>
 		</figure>
 		`

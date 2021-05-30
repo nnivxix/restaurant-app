@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start-dev": "webpack-dev-server --config webpack.dev.js",
+    "dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "test": "karma start"
   },
@@ -21,6 +21,7 @@
     "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^3.6.0",
     "eslint": "^7.4.0",
+    "favicons-webpack-plugin": "3.0.1",
     "html-webpack-plugin": "^4.3.0",
     "jasmine-ajax": "^4.0.0",
     "jasmine-core": "^3.5.0",

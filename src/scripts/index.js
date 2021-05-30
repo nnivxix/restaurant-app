@@ -11,7 +11,6 @@ const catalogs = document.querySelector('.catalogs');
 btnDrawer.addEventListener('click', e => {
 	menu.classList.toggle('open');
 	e.stopPropagation()
-	console.log('masuk btnDrawer')
 })
 
 //close menu

@@ -1,5 +1,5 @@
 Arguments: 
-  /home/hanasa/nodejs/node-v14.16.1-linux-x64/bin/node /home/hanasa/nodejs/node-v14.16.1-linux-x64/bin/yarn add karma.conf.js node_modules package.json radar.svg readme.md specs src webpack.common.js webpack.dev.js webpack.prod.js yarn-error.log yarn.lock
+  /home/hanasa/nodejs/node-v14.16.1-linux-x64/bin/node /home/hanasa/nodejs/node-v14.16.1-linux-x64/bin/yarn add -D favicons-webpack-plugin @4.2.0
 
 PATH: 
   /home/hanasa/nodejs/node-v14.16.1-linux-x64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/hanasa/.local/share/yarn/global/node_modules/.bin
@@ -14,8 +14,8 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/karma.conf.js: Not found
-      at Request.params.callback [as _callback] (/home/hanasa/nodejs/node-v14.16.1-linux-x64/lib/node_modules/yarn/lib/cli.js:66988:18)
+  Error: https://registry.yarnpkg.com/@4.2.0: Request "https://registry.yarnpkg.com/@4.2.0" returned a 405
+      at Request.params.callback [as _callback] (/home/hanasa/nodejs/node-v14.16.1-linux-x64/lib/node_modules/yarn/lib/cli.js:66997:18)
       at Request.self.callback (/home/hanasa/nodejs/node-v14.16.1-linux-x64/lib/node_modules/yarn/lib/cli.js:140662:22)
       at Request.emit (events.js:315:20)
       at Request.<anonymous> (/home/hanasa/nodejs/node-v14.16.1-linux-x64/lib/node_modules/yarn/lib/cli.js:141634:10)
@@ -33,7 +33,7 @@ npm manifest:
     "description": "",
     "main": "index.js",
     "scripts": {
-      "start-dev": "webpack-dev-server --config webpack.dev.js",
+      "dev": "webpack-dev-server --config webpack.dev.js",
       "build": "webpack --config webpack.prod.js",
       "test": "karma start"
     },
