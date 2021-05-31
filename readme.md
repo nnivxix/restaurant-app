@@ -33,11 +33,15 @@
 ### Feature
 - [] Our Story
 - [] Subscribe News Letter (promo)
+- [] Fetch Data
+- [x] Restructure AppBar
+
 
 ### Req
 - [x] Appshell
 - [x] `manifest.json`
 - [] Service Worker
+- [x] Routes
 - [] Cache
 - [] IndexedDB
 - [] WebSocket dan Notification
