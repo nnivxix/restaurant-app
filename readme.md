@@ -35,13 +35,14 @@
 - [] Subscribe News Letter (promo)
 - [] Fetch Data
 - [x] Restructure AppBar
-- [] Buat komponen `hero-app`
+- [] Buat Halaman `[Home, detail, fav]` => malam tgl 1
+- [] Buat komponen `hero-app` dan `card` => malam tgl 1
 
 ### Req
 - [x] ESLint => tgl 1
 - [x] Appshell
 - [x] `manifest.json`
-- [] Service Worker  => tgl 1
+- [x] Service Worker  => tgl 1
 - [x] Routes
 - [] Cache
 - [] IndexedDB

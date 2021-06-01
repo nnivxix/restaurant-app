@@ -2,6 +2,8 @@ import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import cards from './components/cards';
 import AppBar from './views/AppBar';
+import swRegister from './utils/sw-register';
+
 
 const btnDrawer = document.querySelector('.drawer');
 const menu = document.querySelector('.desktop .nav__list');
@@ -19,6 +21,7 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   appBar.renderPage();
+  swRegister();
 });
 
 // get year for footer copyright
