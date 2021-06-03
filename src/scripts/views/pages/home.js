@@ -1,12 +1,18 @@
+import "../components/HeroHeader.js"
+import restaurantSource from "../../data/restaurant-source";
+
 const Home = {
   async render() {
     return `
-      <h2>Trending Now</h2>
+    <hero-header> </hero-header>
+     
     `;
   },
 
   async afterRender() {
     // Fungsi ini akan dipanggil setelah render()
+    const restaurant = await restaurantSource.getRestaurant();
+    console.log(restaurant)
   },
 };
 

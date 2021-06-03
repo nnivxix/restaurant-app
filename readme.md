@@ -36,7 +36,9 @@
 - [] Fetch Data
 - [x] Restructure AppBar
 - [] Buat Halaman `[Home, detail, fav]` => malam tgl 1
-- [] Buat komponen `hero-app` dan `card` => malam tgl 1
+- [x] Buat komponen `hero-app` dan `card` => malam tgl 1
+- [] Config esLint 
+	-- using _ / underscore character
 
 ### Req
 - [x] ESLint => tgl 1
