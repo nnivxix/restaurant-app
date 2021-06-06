@@ -33,9 +33,9 @@
 ### Feature
 - [] Our Story
 - [] Subscribe News Letter (promo)
-- [] Fetch Data
+- [x] Fetch Data
 - [x] Restructure AppBar
-- [] Buat Halaman `[Home, detail, fav]` => malam tgl 1
+- [x] Buat Halaman `[Home, detail, fav]` => malam tgl 1
 - [x] Buat komponen `hero-app` dan `card` => malam tgl 1
 - [] Config esLint 
 	-- using _ / underscore character

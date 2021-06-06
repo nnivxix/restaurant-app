@@ -3,7 +3,6 @@ import '../styles/main.css';
 import AppBar from './views/AppBar';
 import swRegister from './utils/sw-register';
 
-
 const btnDrawer = document.querySelector('.drawer');
 const menu = document.querySelector('.desktop .nav__list');
 const main = document.querySelector('#content');
@@ -27,5 +26,3 @@ window.addEventListener('load', () => {
 const year = new Date().getFullYear();
 const captionYear = document.querySelector('.year');
 captionYear.textContent = year;
-
-
