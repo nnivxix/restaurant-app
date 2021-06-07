@@ -1,13 +1,13 @@
 import CONFIG from '../../globals/config';
 
 function lengthReview(rev) {
-  if (rev.review.length > 20) {
-    return `${rev.review.substring(0, 50)}...`;
-  }
-  return rev.review;
+	if (rev.review.length > 20) {
+		return `${rev.review.substring(0, 50)}...`;
+	}
+	return rev.review;
 }
 function reviewPelanggan(restaurant) {
-  return restaurant.customerReviews.map((rev) => `
+	return restaurant.customerReviews.map((rev) => `
 		<li class="review">
 			<p class="name__review">${rev.name}</p>
 			<p class="description__review">${lengthReview(rev)}</p>
@@ -17,19 +17,19 @@ function reviewPelanggan(restaurant) {
 }
 
 function categoryRestaurant(restaurant) {
-  return restaurant.categories.map((category) => `
+	return restaurant.categories.map((category) => `
 			<li>${category.name}</li>
 		`).join('');
 }
 
 function foodRestaurant(restaurant) {
-  return restaurant.menus.foods.map((food) => `
+	return restaurant.menus.foods.map((food) => `
 		<li>${food.name}</li>
 	`).join('');
 }
 
 function drinkRestaurant(restaurant) {
-  return restaurant.menus.drinks.map((drink) => `
+	return restaurant.menus.drinks.map((drink) => `
 		<li>${drink.name}</li>
 	`).join('');
 }
@@ -82,4 +82,19 @@ const cardResto = (restaurant) => `
 	</figure>
 `;
 
-export { detailRestaurant, cardResto };
+const createLikeButtonTemplate = () => `
+  <button aria-label="like this movie" id="likeButton" class="like">
+     <i class="bi bi-bookmark-heart-fill"></i>
+  </button>
+`;
+
+const createLikedButtonTemplate = () => `
+  <button aria-label="unlike this movie" id="likeButton" class="like">
+    <i class="bi bi-trash-fill"></i>
+  </button>
+`;
+
+export {
+	detailRestaurant, cardResto, createLikeButtonTemplate,
+	createLikedButtonTemplate,
+};

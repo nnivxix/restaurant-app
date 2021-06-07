@@ -1,11 +1,24 @@
+import FavoriteRestoIdb from '../../data/database-resto';
+import { cardResto } from '../templates/template-creator';
+
 const Favorites = {
-  async render() {
-    return `<h2>hello fav</h2>`;
-  },
+	async render() {
+		return `
+    <div class="content">
+      <h2 class="detail__title">Your Liked Restaurant</h2>
+      <div id="restos" class="catalogs">
+ 
+      </div>
+    </div>`;
+	},
 
-  async afterRender() {
-
-  },
+	async afterRender() {
+		const restos = await FavoriteRestoIdb.getAllRestos();
+		const restosContainer = document.querySelector('.catalogs');
+		restos.forEach((restaurant) => {
+			restosContainer.innerHTML += cardResto(restaurant);
+		});
+	},
 };
 
 export default Favorites;

@@ -12,6 +12,10 @@
         "sourceType": "module"
     },
     "rules": {
-        "no-console": 0
+        "no-console": 0,
+        "no-tabs": ["error", { "allowIndentationTabs": true }],
+        "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+        "indent": ["error", "tab"],
+        "no-restricted-globals": ["error", "event", "fdescribe"]
     }
 }

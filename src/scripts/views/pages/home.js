@@ -1,10 +1,10 @@
-import '../components/HeroHeader.js';
+import '../components/HeroHeader';
 import restaurantSource from '../../data/restaurant-source';
 import { cardResto } from '../templates/template-creator';
 
 const Home = {
-  async render() {
-    return `
+	async render() {
+		return `
     <hero-header> </hero-header>
     <section class="catalogs">
     <h1 tabindex="0" id="trending" class="cap__trend">Jelajahi Yang Terdekat <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up" viewBox="0 0 16 16">
@@ -12,16 +12,16 @@ const Home = {
     </svg></h1>
     </section>
     `;
-  },
+	},
 
-  async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
-    const restaurants = await restaurantSource.getRestaurant();
-    const catalogs = document.querySelector('.catalogs');
-    restaurants.forEach((restaurant) => {
-      catalogs.innerHTML += cardResto(restaurant);
-    });
-  },
+	async afterRender() {
+		// Fungsi ini akan dipanggil setelah render()
+		const restaurants = await restaurantSource.getRestaurant();
+		const catalogs = document.querySelector('.catalogs');
+		restaurants.forEach((restaurant) => {
+			catalogs.innerHTML += cardResto(restaurant);
+		});
+	},
 };
 
 export default Home;

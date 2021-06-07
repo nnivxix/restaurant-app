@@ -8,18 +8,18 @@ const menu = document.querySelector('.desktop .nav__list');
 const main = document.querySelector('#content');
 
 const appBar = new AppBar({
-  button: btnDrawer,
-  drawer: menu,
-  content: main,
+	button: btnDrawer,
+	drawer: menu,
+	content: main,
 });
 
 window.addEventListener('hashchange', () => {
-  appBar.renderPage();
+	appBar.renderPage();
 });
 
 window.addEventListener('load', () => {
-  appBar.renderPage();
-  swRegister();
+	appBar.renderPage();
+	swRegister();
 });
 
 // get year for footer copyright

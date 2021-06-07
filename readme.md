@@ -24,8 +24,8 @@
 	```
 - [] Memanfaatkan plugin `favicons-webpack-plugin` untuk meload favicon.
 - [x] Tambahkan meta tag Description pada berkas html.
-- [] Cobalah membuat Web Components pada beberapa komponen UI yang bersifat Reusable.
-- [] Perhatikan _style guide_ dan gunakan ***Linter***
+- [x] Cobalah membuat Web Components pada beberapa komponen UI yang bersifat Reusable.
+- [x] Perhatikan _style guide_ dan gunakan ***Linter***
 
 
 
@@ -37,8 +37,8 @@
 - [x] Restructure AppBar
 - [x] Buat Halaman `[Home, detail, fav]` => malam tgl 1
 - [x] Buat komponen `hero-app` dan `card` => malam tgl 1
-- [] Config esLint 
-	-- using _ / underscore character
+- [x] Config esLint 
+- [x] using _ / underscore character
 
 ### Req
 - [x] ESLint => tgl 1
@@ -47,5 +47,5 @@
 - [x] Service Worker  => tgl 1
 - [x] Routes
 - [x] Cache
-- [] IndexedDB
+- [x] IndexedDB
 - [] WebSocket dan Notification
