@@ -16,12 +16,12 @@
 - [x] Pada tag `<a>` tambahkan atribut rel="noopener" atau rel="noreferrer". Hal ini bertujuan dapat improve performa website
 - [x] Sebaiknya element image restoran yang kamu tampilkan pada halaman home diberi ukuran(width dan height) yang sama agar lebih rapi dan seragam.
 
-		```
+	```css
 		width: 100%;
 		height: 270px;
 		object-fit: cover;
 		object-position: center;
-		```
+	```
 - [] Memanfaatkan plugin `favicons-webpack-plugin` untuk meload favicon.
 - [x] Tambahkan meta tag Description pada berkas html.
 - [] Cobalah membuat Web Components pada beberapa komponen UI yang bersifat Reusable.
@@ -46,6 +46,6 @@
 - [x] `manifest.json`
 - [x] Service Worker  => tgl 1
 - [x] Routes
-- [] Cache
+- [x] Cache
 - [] IndexedDB
 - [] WebSocket dan Notification
