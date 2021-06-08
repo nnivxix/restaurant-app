@@ -15,7 +15,6 @@ const FavoriteRestoIdb = {
 	},
 	async getAllRestos() {
 		return (await dbPromise).getAll(OBJECT_STORE_NAME);
-
 	},
 	async putResto(movie) {
 		return (await dbPromise).put(OBJECT_STORE_NAME, movie);

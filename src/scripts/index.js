@@ -2,7 +2,7 @@ import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import AppBar from './views/AppBar';
 import swRegister from './utils/sw-register';
-import './views/components/TheFooter.js';
+import './views/components/TheFooter';
 
 const btnDrawer = document.querySelector('.drawer');
 const menu = document.querySelector('.desktop .nav__list');
