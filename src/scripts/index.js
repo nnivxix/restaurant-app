@@ -2,6 +2,7 @@ import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import AppBar from './views/AppBar';
 import swRegister from './utils/sw-register';
+import './views/components/TheFooter.js';
 
 const btnDrawer = document.querySelector('.drawer');
 const menu = document.querySelector('.desktop .nav__list');
@@ -23,6 +24,6 @@ window.addEventListener('load', () => {
 });
 
 // get year for footer copyright
-const year = new Date().getFullYear();
-const captionYear = document.querySelector('.year');
-captionYear.textContent = year;
+// const year = new Date().getFullYear();
+// const captionYear = document.querySelector('.year');
+// captionYear.textContent = year;

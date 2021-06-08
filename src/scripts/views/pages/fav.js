@@ -15,9 +15,21 @@ const Favorites = {
 	async afterRender() {
 		const restos = await FavoriteRestoIdb.getAllRestos();
 		const restosContainer = document.querySelector('.catalogs');
-		restos.forEach((restaurant) => {
+		let notDataFound = `
+			<div class="container-img">
+				<p>Opp's, Looks like you haven't saved your favorite restaurant data.</p>
+				<img src="../images/404.png" alt="notfound image">
+			</div>
+		`
+		if (restos.length === 0) {
+			restosContainer.innerHTML = notDataFound
+		} else {
+			restos.forEach((restaurant) => {
 			restosContainer.innerHTML += cardResto(restaurant);
 		});
+		}
+
+		console.log(restos)
 	},
 };
 

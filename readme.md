@@ -48,4 +48,4 @@
 - [x] Routes
 - [x] Cache
 - [x] IndexedDB
-- [] WebSocket dan Notification
+- ~[ ] WebSocket dan Notification~
