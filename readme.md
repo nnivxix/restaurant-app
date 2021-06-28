@@ -71,18 +71,18 @@
 
 ## Submissin 3
 ### Req or features
-1. **Integration Test**
+1. ~~**Integration Test**~~
 	
 	Syarat:
-	- [ ] Menerapkan integration test untuk fungsi menyukai dan batal menyukai restoran. Referensi [Menyukai Film dari Dicoding](https://www.dicoding.com/academies/219/tutorials/9849?from=9844)
+	- [x] ~~Menerapkan integration test untuk fungsi menyukai dan batal menyukai restoran. Referensi [Menyukai Film dari Dicoding](https://www.dicoding.com/academies/219/tutorials/9849?from=9844).~~
 
 
-2. **End to End Test**
+2. ~~**End to End Test**~~
 
 	Syarat:
-	- [ ] Menerapkan End to End Test dengan skenario:
-		- [ ] Menyukai salah satu restoran.
-		- [ ] Batal menyukai restoran tersebut.
+	- [x] Menerapkan End to End Test dengan skenario:
+		- [x] Menyukai salah satu restoran.
+		- [x] Batal menyukai restoran tersebut.
 
 
 3. **Image Optimization**

@@ -7,7 +7,8 @@
     "dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "test": "karma start",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src",
+    "e2e": "codeceptjs run --steps"
   },
   "keywords": [],
   "author": [
@@ -42,8 +43,10 @@
     "whatwg-fetch": "^3.2.0"
   },
   "dependencies": {
+    "codeceptjs": "^3.0.7",
     "file-loader": "^6.2.0",
     "idb": "^6.1.2",
+    "puppeteer": "^10.0.0",
     "regenerator-runtime": "^0.13.5",
     "serviceworker-webpack-plugin": "^1.0.1"
   }

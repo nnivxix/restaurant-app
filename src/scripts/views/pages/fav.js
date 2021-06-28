@@ -16,7 +16,7 @@ const Favorites = {
 		const restos = await FavoriteRestoIdb.getAllRestos();
 		const restosContainer = document.querySelector('.catalogs');
 		const dataNotFound = `
-			<div class="container-img">
+			<div class="container-img not__found">
 				<p>Opp's, Looks like you haven't saved your favorite restaurant data.</p>
 				<img src="../images/404.png" alt="notfound image">
 			</div>
