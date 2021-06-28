@@ -20,7 +20,6 @@ const Home = {
 		const catalogs = document.querySelector('.catalogs');
 		restaurants.forEach((restaurant) => {
 			catalogs.innerHTML += cardResto(restaurant);
-			console.log(restaurant);
 		});
 	},
 };

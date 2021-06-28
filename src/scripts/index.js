@@ -22,8 +22,3 @@ window.addEventListener('load', () => {
 	appBar.renderPage();
 	swRegister();
 });
-
-// get year for footer copyright
-// const year = new Date().getFullYear();
-// const captionYear = document.querySelector('.year');
-// captionYear.textContent = year;
