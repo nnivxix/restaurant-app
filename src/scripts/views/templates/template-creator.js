@@ -83,13 +83,13 @@ const cardResto = (restaurant) => `
 `;
 
 const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="like">
+  <button aria-label="like this resto" id="likeButton" class="like">
      <i class="bi bi-bookmark-heart-fill"></i>
   </button>
 `;
 
 const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="like">
+  <button aria-label="unlike this resto" id="likeButton" class="like">
     <i class="bi bi-trash-fill"></i>
   </button>
 `;
