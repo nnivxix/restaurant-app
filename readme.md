@@ -80,15 +80,15 @@
 2. ~~**End to End Test**~~
 
 	Syarat:
-	- [x] Menerapkan End to End Test dengan skenario:
-		- [x] Menyukai salah satu restoran.
-		- [x] Batal menyukai restoran tersebut.
+	- [x] ~~Menerapkan [End to End Test](https://www.dicoding.com/academies/219/tutorials/9959?from=9955) dengan skenario:~~
+		- [x] ~~Menyukai salah satu restoran.~~
+		- [x] ~~Batal menyukai restoran tersebut.~~
 
 
 3. **Image Optimization**
 
 	Syarat:
-	- [ ] Melakukan kompresi terhadap gambar hero yang digunakan. Ukuran gambar harus di bawah 200kb.
+	- [x] Melakukan kompresi terhadap gambar hero yang digunakan. Ukuran gambar harus di bawah 200kb.
 	- [ ] Menerapkan teknik image responsive pada gambar hero. Gambar pada layar seluler dan desktop harus berbeda.
 	- [ ] Menerapkan teknik lazy loading pada gambar daftar restoran yang ditampilkan.
 

@@ -87,8 +87,9 @@ nav{
 
 /*hero*/
 .hero {
-	background: url("../public/images/heros/hero-image_2.jpg");
+	background: url("../public/images/hero-image_2-small.jpg");
 	background-size:cover;
+	background-position: center;
 	box-shadow:inset 0 0 0 2000px rgba(000, 0, 000, 0.3);
 	min-height: 80vh;
 	display: flex;
@@ -312,6 +313,10 @@ footer p {
 		margin-bottom: 0;
 	}
 	/*Hero*/
+	.hero{
+		background: url("../public/images/hero-image_2-large.jpg");
+		background-size: cover;
+	}
 	.hero h1{
 		font-size: 1.8em;
 	}

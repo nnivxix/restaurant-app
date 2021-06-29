@@ -1,4 +1,6 @@
 import CONFIG from '../../globals/config';
+import notFoundImgLarge from '../../../public/images/404-large.jpg';
+import notFoundImgSmall from '../../../public/images/404-small.jpg';
 
 function lengthReview(rev) {
 	if (rev.review.length > 20) {
@@ -93,8 +95,17 @@ const createLikedButtonTemplate = () => `
     <i class="bi bi-trash-fill"></i>
   </button>
 `;
+const notFoundStatus = () => `
+	<div class="container-img not__found">
+		<p>Opp's, Looks like you haven't saved your favorite restaurant data.</p>
 
+		<picture>
+			<source media="(max-width: 600px)" srcset="${notFoundImgSmall}">
+			<img src="${notFoundImgLarge}" alt="notfound image">
+		</picture>
+	</div>
+`
 export {
 	detailRestaurant, cardResto, createLikeButtonTemplate,
-	createLikedButtonTemplate,
+	createLikedButtonTemplate, notFoundStatus
 };

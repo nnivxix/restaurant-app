@@ -1,5 +1,5 @@
 import FavoriteRestoIdb from '../../data/database-resto';
-import { cardResto } from '../templates/template-creator';
+import { cardResto, notFoundStatus } from '../templates/template-creator';
 
 const Favorites = {
 	async render() {
@@ -15,14 +15,8 @@ const Favorites = {
 	async afterRender() {
 		const restos = await FavoriteRestoIdb.getAllRestos();
 		const restosContainer = document.querySelector('.catalogs');
-		const dataNotFound = `
-			<div class="container-img not__found">
-				<p>Opp's, Looks like you haven't saved your favorite restaurant data.</p>
-				<img src="../images/404.png" alt="notfound image">
-			</div>
-		`;
 		if (restos.length === 0) {
-			restosContainer.innerHTML = dataNotFound;
+			restosContainer.innerHTML = notFoundStatus();
 		} else {
 			restos.forEach((restaurant) => {
 				restosContainer.innerHTML += cardResto(restaurant);

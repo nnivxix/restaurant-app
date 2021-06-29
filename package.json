@@ -8,7 +8,8 @@
     "build": "webpack --config webpack.prod.js",
     "test": "karma start",
     "lint": "eslint ./src",
-    "e2e": "codeceptjs run --steps"
+    "e2e": "codeceptjs run --steps",
+    "build-image": "node sharp.js"
   },
   "keywords": [],
   "author": [
@@ -25,7 +26,7 @@
     "eslint": "^7.27.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.4",
-    "favicons-webpack-plugin": "3.0.1",
+    "favicons-webpack-plugin": "4.2.0",
     "html-webpack-plugin": "^4.3.0",
     "jasmine-ajax": "^4.0.0",
     "jasmine-core": "^3.5.0",
@@ -46,8 +47,11 @@
     "codeceptjs": "^3.0.7",
     "file-loader": "^6.2.0",
     "idb": "^6.1.2",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
     "puppeteer": "^10.0.0",
     "regenerator-runtime": "^0.13.5",
-    "serviceworker-webpack-plugin": "^1.0.1"
+    "serviceworker-webpack-plugin": "^1.0.1",
+    "sharp": "^0.28.3"
   }
 }
