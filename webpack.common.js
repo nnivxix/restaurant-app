@@ -5,12 +5,36 @@ const path = require('path');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
 	entry: path.resolve(__dirname, 'src/scripts/index.js'),
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js',
+	},
+	optimization: {
+		splitChunks: {
+			chunks: 'all',
+			minSize: 20000,
+			maxSize: 70000,
+			minChunks: 1,
+			maxAsyncRequests: 30,
+			maxInitialRequests: 30,
+			automaticNameDelimiter: '~',
+			enforceSizeThreshold: 50000,
+				cacheGroups: {
+					defaultVendors: {
+						test: /[\\/]node_modules[\\/]/,
+						priority: -10
+					},
+					default: {
+						minChunks: 2,
+						priority: -20,
+						reuseExistingChunk: true
+					}
+				}
+		}
 	},
 	module: {
 		rules: [
@@ -76,36 +100,8 @@ module.exports = {
 			logo: './src/public/icons/logo.svg',
 			mode:'webapp',
 			manifest: '/src/public/manifest.json',
-			// devMode: 'light',
-			// prefix: 'assets/',
-			// favicons: {
-			// 	appName: 'Foodlive Restaurant',
-			// 	appShortName: 'Foodlive',
-			// 	appDescription: 'Temukan Restaurant dengan mudah disekitar Anda',
-			// 	developerName: 'Hanasa',
-			// 	developerURL:'https://github.com/nnivxix',
-			// 	dir: 'auto',
-			// 	lang: 'en-US',
-			// 	theme_color: '#f05945',
-			// 	background_color: '#fff',
-			// 	display: 'standalone',
-			// 	appleStatusBarStyle: 'black-translucent',
-			// 	orientation: 'portrait',
-			// 	start_url: '/',
-			// 	scope: '.',
-			// 	version: '1.0',
-			// 	logging: false,
-			// 	icons:{
-			// 		android: true,
-			// 		appleIcon: true,
-			// 		appleStartup: true,
-			// 		coast: true,
-			// 		// favicons: true,
-			// 		firefox:true,
-			// 		yandex: true,
-			// 		windows:true,
-			// 	}
-			// }
 		}),
+
+		new BundleAnalyzerPlugin(),
 	],
 };
