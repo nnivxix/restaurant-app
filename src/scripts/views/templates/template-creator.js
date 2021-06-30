@@ -37,7 +37,7 @@ function drinkRestaurant(restaurant) {
 }
 
 const detailRestaurant = (restaurant) => `
-		<img tabindex="0" src="${CONFIG.BASE_IMAGE_URL_MD + restaurant.pictureId}" alt="${restaurant.name}" class="img__restaurant">
+		<img tabindex="0" class="lazyload" src="${CONFIG.BASE_IMAGE_URL_MD + restaurant.pictureId}" alt="${restaurant.name}" class="img__restaurant">
 		<h1 tabindex="0" class="name__restaurant">${restaurant.name}</h1>
 		<h2 tabindex="0" class="location__restaurant"><i class="geo bi bi-geo-alt-fill"></i> ${restaurant.city}, ${restaurant.address}</h2>
 		<h2 tabindex="0" class="rate__restaurant"><i class="star bi bi-star-fill"></i> ${restaurant.rating}</h2>
@@ -71,16 +71,19 @@ const detailRestaurant = (restaurant) => `
 `;
 const cardResto = (restaurant) => `
 	<figure tabIndex="0" class="card">
-	<img class="img_card" src="${CONFIG.BASE_IMAGE_URL_SM + restaurant.pictureId}" alt="${restaurant.name}">
-	<figcaption class="caption">
-	<h1> <a class="cta__restaurant" href="/#/detail/${restaurant.id}">${restaurant.name}</a></h1>
-	<h1></h1>
-	<ul class="detail__card">
-	<li class="rate"><i class="star bi bi-star-fill"></i> ${restaurant.rating}  |  </li>
-	<li class="city"><i class="geo bi bi-geo-alt-fill"></i> ${restaurant.city}</li>
-	</ul>
-	<p class="desc">${restaurant.description.substring(0, 96)}...</p>
-	</figcaption>
+		<picture>
+			<source class="lazyload" media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_URL_MD + restaurant.pictureId}">
+			<img class="img_card lazyload" src="${CONFIG.BASE_IMAGE_URL_LG + restaurant.pictureId}" alt="${restaurant.name}">
+		</picture>
+
+		<figcaption class="caption">
+		<h1> <a class="cta__restaurant" href="/#/detail/${restaurant.id}">${restaurant.name}</a></h1>
+		<ul class="detail__card">
+		<li class="rate"><i class="star bi bi-star-fill"></i> ${restaurant.rating}  |  </li>
+		<li class="city"><i class="geo bi bi-geo-alt-fill"></i> ${restaurant.city}</li>
+		</ul>
+		<p class="desc">${restaurant.description.substring(0, 96)}...</p>
+		</figcaption>
 	</figure>
 `;
 
@@ -96,11 +99,11 @@ const createLikedButtonTemplate = () => `
   </button>
 `;
 const notFoundStatus = () => `
-	<div class="container-img not__found">
-		<p>Opp's, Looks like you haven't saved your favorite restaurant data.</p>
+	<div tabIndex="0" class="container-img not__found">
+		<p tabIndex="0" >Opp's, Looks like you haven't saved your favorite restaurant data.</p>
 
 		<picture>
-			<source media="(max-width: 600px)" srcset="${notFoundImgSmall}">
+			<source class="lazyload" media="(max-width: 600px)" srcset="${notFoundImgSmall}">
 			<img src="${notFoundImgLarge}" alt="notfound image">
 		</picture>
 	</div>

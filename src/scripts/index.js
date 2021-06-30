@@ -3,6 +3,8 @@ import '../styles/main.css';
 import AppBar from './views/AppBar';
 import swRegister from './utils/sw-register';
 import './views/components/TheFooter';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const btnDrawer = document.querySelector('.drawer');
 const menu = document.querySelector('.desktop .nav__list');

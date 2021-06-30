@@ -23,7 +23,7 @@
 		object-position: center;
 	```
 
-- [ ] Memanfaatkan plugin `favicons-webpack-plugin` untuk meload favicon.
+- [x] Memanfaatkan plugin `favicons-webpack-plugin` untuk meload favicon.
 - [x] Tambahkan meta tag Description pada berkas html.
 - [x] Cobalah membuat Web Components pada beberapa komponen UI yang bersifat Reusable.
 - [x] Perhatikan _style guide_ dan gunakan ***Linter***
@@ -32,8 +32,8 @@
 
 ## Submission 2
 ### Feature
-- [ ] Our Story
-- [ ] Subscribe News Letter (promo)
+- [ ] ~Our Story~
+- [ ] ~Subscribe News Letter (promo)~
 - [x] Fetch Data
 - [x] Restructure AppBar
 - [x] Buat Halaman `[Home, detail, fav]` => malam tgl 1
@@ -74,23 +74,23 @@
 1. ~~**Integration Test**~~
 	
 	Syarat:
-	- [x] ~~Menerapkan integration test untuk fungsi menyukai dan batal menyukai restoran. Referensi [Menyukai Film dari Dicoding](https://www.dicoding.com/academies/219/tutorials/9849?from=9844).~~
+		- [x] ~~Menerapkan integration test untuk fungsi menyukai dan batal menyukai restoran. Referensi [Menyukai Film dari Dicoding](https://www.dicoding.com/academies/219/tutorials/9849?from=9844).~~
 
 
 2. ~~**End to End Test**~~
 
 	Syarat:
-	- [x] ~~Menerapkan [End to End Test](https://www.dicoding.com/academies/219/tutorials/9959?from=9955) dengan skenario:~~
+		- [x] ~~Menerapkan [End to End Test](https://www.dicoding.com/academies/219/tutorials/9959?from=9955) dengan skenario:~~
 		- [x] ~~Menyukai salah satu restoran.~~
 		- [x] ~~Batal menyukai restoran tersebut.~~
 
 
-3. **Image Optimization**
+3. ~~**Image Optimization**~~
 
 	Syarat:
-	- [x] Melakukan kompresi terhadap gambar hero yang digunakan. Ukuran gambar harus di bawah 200kb.
-	- [ ] Menerapkan teknik image responsive pada gambar hero. Gambar pada layar seluler dan desktop harus berbeda.
-	- [ ] Menerapkan teknik lazy loading pada gambar daftar restoran yang ditampilkan.
+		- [x] ~~Melakukan kompresi terhadap gambar hero yang digunakan. Ukuran gambar harus di bawah 200kb.~~
+		- [x] ~~Menerapkan teknik image responsive pada gambar hero. Gambar pada layar seluler dan desktop harus berbeda.~~
+		- [x] ~~Menerapkan teknik lazy loading pada gambar daftar restoran yang ditampilkan.~~
 
 
 4. **Bundle Optimization**
