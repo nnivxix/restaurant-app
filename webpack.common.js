@@ -4,8 +4,8 @@ const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const path = require('path');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
 	entry: path.resolve(__dirname, 'src/scripts/index.js'),
@@ -96,11 +96,11 @@ module.exports = {
 				})
 			]
 		}),
-		new FaviconsWebpackPlugin({
-			logo: './src/public/icons/logo.svg',
-			mode:'webapp',
-			manifest: '/src/public/manifest.json',
-		}),
-		new BundleAnalyzerPlugin(),
+		// new FaviconsWebpackPlugin({
+		// 	logo: './src/public/icons/logo.svg',
+		// 	mode:'webapp',
+		// 	manifest: '/src/public/manifest.json',
+		// }),
+		// new BundleAnalyzerPlugin(),
 	],
 };

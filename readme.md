@@ -59,7 +59,7 @@
 
 - [ ] Atur jarak antar item.
 
-- [ ] Cobalah untuk mengimplementasikan fitur add customer review pada aplikasi kamu agar lebih interaktif. Referensi tambahan bisa dilihat di [add review](https://googlechrome.github.io/samples/fetch-api/fetch-post.html).
+- [x] Cobalah untuk mengimplementasikan fitur add customer review pada aplikasi kamu agar lebih interaktif. Referensi tambahan bisa dilihat di [add review](https://googlechrome.github.io/samples/fetch-api/fetch-post.html).
 
 - [ ] Kamu juga bisa memanfaatkan plugin `workbox-webpack-plugin` untuk membuat service worker menggunakan workbox dengan webpack. Referensi [workbox plugin](https://developers.google.com/web/tools/workbox/guides/codelabs/webpack).
 

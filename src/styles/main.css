@@ -64,7 +64,8 @@ nav{
 	position: absolute;
 	z-index: 2;
 	transform: translateX(-100%);
-	display: block;
+	display: inline-block;
+	margin-top: 1em;
   top: 49px;
   transition: transform 0.5s ease-in-out;
   width: 100%;
@@ -283,6 +284,45 @@ footer p {
 	color: white;
 	border-radius: 14px;
 }
+
+/*add review*/
+.add__review{
+	display: flex;
+	flex-direction: column;
+	margin: 0 2em;
+}
+.name__reviewer{
+	margin: 5px 0;
+	border-radius: 4px;
+	border: 1px solid #dddddd;
+	padding: 10px;
+
+}
+.input__review{
+	margin: 5px 0;
+	font-size: 18px;
+	border-radius: 4px;
+	border: 1px solid #dddddd;
+	padding: 12px 10px;
+}
+.submit__review{
+	align-self: flex-end;
+	font-size: 1.2em;
+	padding: 10px 16px;
+	background: #f05945;
+	color: white;
+	border: none;
+	margin: 10px 0;
+	border-radius: 6px;
+	cursor: pointer;
+}
+.input__review input[type=text]:focus{
+	border: 1px solid #f05945 !important;
+	box-shadow: 0 0 10px #f05945 !important;
+	-moz-box-shadow: 0 0 10px #f05945 !important;
+	-webkit-box-shadow: 0 0 10px #f05945 !important;
+}
+
 /*not found*/
 .container-img{
 	display: flex;
@@ -301,6 +341,80 @@ footer p {
 	color: #b1b1b0;
 }
 
+/*toast*/
+.toast__container{
+	display: none;
+	width: 90%;
+	background-color: #fff;
+	color: dimgray;
+	box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.2);
+	justify-content: center;
+	position: fixed;
+	bottom: 20px;
+	right: 12%;
+}
+.toast__display{
+	display: flex;
+}
+.bi{
+	align-self: center;
+	justify-self: flex-start;
+	padding: 0 10px;
+}
+.check{
+	color:#31AA75;
+}
+.ch{
+	border-left: 5px solid #31AA75;
+}
+.error{
+	color: #DA1212;
+}
+.err{
+	border-left: 5px solid #DA1212;
+}
+
+.close__x{
+	align-self: center;
+	padding: 0 10px;
+	color: #878787;
+	cursor: pointer;
+	font-size: 15px;
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.fade-out {
+	opacity: 1;
+	animation-name: fadeOutOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeOutOpacity {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
 
 
 
@@ -389,6 +503,10 @@ footer p {
 		font-size:1.5em;
 		font-weight: 600;
 
+	}
+	.toast__container{
+		width: 35%;
+		right: 35%;
 	}
 }
 

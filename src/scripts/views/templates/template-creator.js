@@ -36,6 +36,8 @@ function drinkRestaurant(restaurant) {
 	`).join('');
 }
 
+
+
 const detailRestaurant = (restaurant) => `
 		<img tabindex="0" class="lazyload" src="${CONFIG.BASE_IMAGE_URL_MD + restaurant.pictureId}" alt="${restaurant.name}" class="img__restaurant">
 		<h1 tabindex="0" class="name__restaurant">${restaurant.name}</h1>
@@ -60,12 +62,16 @@ const detailRestaurant = (restaurant) => `
 				${drinkRestaurant(restaurant)}
 			</ul>
 		</article>
+		<section class="add__review">
+			<h1>Tambah review dulu boleh? </h1>
+			<input type="text" placeholder="Hanasa" class="name__reviewer">
+			<textarea type="text" placeholder="Makanannya Enak!" class="input__review"></textarea>
+			<input type="button" value="add review" class="submit__review">
+		</section>
 		<article tabindex="0" class="reviews">
 			<h3 tabindex="0">Review Pelanggan</h3>
 			<ul tabindex="0" class="list ">
-
 					${reviewPelanggan(restaurant)}
-
 			</ul>
 		</article>
 `;
@@ -108,7 +114,15 @@ const notFoundStatus = () => `
 		</picture>
 	</div>
 `;
+
+const toasts = (ctn, icon, msg) => `
+	<div class="toast__container ${ctn}">
+		<i class="${icon} bi bi-x-circle-fill"></i>
+		<p class="message">${msg}</p>
+		<i class="bi bi-x-lg close__x"></i>
+	</div>
+`
 export {
 	detailRestaurant, cardResto, createLikeButtonTemplate,
-	createLikedButtonTemplate, notFoundStatus,
+	createLikedButtonTemplate, notFoundStatus, toasts
 };
