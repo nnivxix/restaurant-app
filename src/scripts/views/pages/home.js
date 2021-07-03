@@ -18,7 +18,7 @@ const Home = {
 		// Fungsi ini akan dipanggil setelah render()
 		const restaurants = await restaurantSource.getRestaurant();
 		const catalogs = document.querySelector('.catalogs');
-		console.log(restaurants);
+
 		restaurants.forEach((restaurant) => {
 			catalogs.innerHTML += cardResto(restaurant);
 		});

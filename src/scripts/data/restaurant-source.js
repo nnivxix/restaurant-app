@@ -6,23 +6,26 @@ class RestaurantSource {
 		const response = await fetch(API_ENDPOINT.LIST);
 		const responseJson = await response.json();
 		return responseJson.restaurants;
+		// return responseJson
+		console.log(responseJson)
 	}
 
 	static async detailRestaurant(id) {
 		const response = await fetch(API_ENDPOINT.DETAIL(id));
 		const responseJson = await response.json();
 		return responseJson.restaurant;
+
 	}
 
-	static async postReview(review){
+	static async postReview(review) {
 		fetch(CONFIG.BASE_URL_REVIEW, {
-			method: "POST",
+			method: 'POST',
 			headers: {
-				"Content-Type" : "application/json",
-				"X-Auth-Token": 12345
+				'Content-Type': 'application/json',
+				'X-Auth-Token': 12345,
 			},
-			body: JSON.stringify(review)
-		})
+			body: JSON.stringify(review),
+		});
 	}
 }
 export default RestaurantSource;

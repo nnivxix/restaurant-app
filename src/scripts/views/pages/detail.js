@@ -11,8 +11,8 @@ const Detail = {
 
       </div>
       <div id="likeButtonContainer"></div>
-      ${toasts('err','error', 'Harus diisi semuanya gaes.')}
-      ${toasts('ch','check', 'Ripiumu akan segera ditambahkan.')}
+      ${toasts('err', 'error', 'Harus diisi semuanya gaes.')}
+      ${toasts('ch', 'check', 'Ripiumu akan segera ditambahkan.')}
 
     `;
 	},
@@ -39,43 +39,42 @@ const Detail = {
 			},
 		});
 
-		const textReview = document.querySelector('.input__review')
-		const nameReview = document.querySelector('.name__reviewer')
+		const textReview = document.querySelector('.input__review');
+		const nameReview = document.querySelector('.name__reviewer');
 		const btnReview = document.querySelector('.submit__review');
 
 		const err = document.querySelector('.err');
 		const ch = document.querySelector('.ch');
+
 		btnReview.addEventListener('click', (e) => {
 			e.stopPropagation();
-			if(nameReview.value == '' || textReview.value == ''){
-				err.classList.add('toast__display')
-				err.classList.add('fade-in')
+			if (nameReview.value === '' || textReview.value === '') {
+				err.classList.add('toast__display');
+				err.classList.add('fade-in');
 
-				setTimeout(function(){
-					err.classList.add('fade-out')
+				setTimeout(() => {
+					err.classList.add('fade-out');
 					err.classList.remove('toast__display');
-
-				}, 5000)
-			} else{
+				}, 5000);
+			} else {
 				restaurantSource.postReview({
 					id: restaurant.id,
 					name: nameReview.value,
-					review: textReview.value
-				})
+					review: textReview.value,
+				});
 
-				ch.classList.add('toast__display')
-				ch.classList.add('fade-in')
+				ch.classList.add('toast__display');
+				ch.classList.add('fade-in');
 
-				setTimeout(function(){
-					ch.classList.add('fade-out')
+				setTimeout(() => {
+					ch.classList.add('fade-out');
 					ch.classList.remove('toast__display');
 					location.reload();
-				}, 5000)
+				}, 5000);
 				nameReview.value = '';
 				textReview.value = '';
-
 			}
-		})
+		});
 	},
 };
 

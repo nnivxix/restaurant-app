@@ -36,8 +36,6 @@ function drinkRestaurant(restaurant) {
 	`).join('');
 }
 
-
-
 const detailRestaurant = (restaurant) => `
 		<img tabindex="0" class="lazyload" src="${CONFIG.BASE_IMAGE_URL_MD + restaurant.pictureId}" alt="${restaurant.name}" class="img__restaurant">
 		<h1 tabindex="0" class="name__restaurant">${restaurant.name}</h1>
@@ -121,8 +119,8 @@ const toasts = (ctn, icon, msg) => `
 		<p class="message">${msg}</p>
 		<i class="bi bi-x-lg close__x"></i>
 	</div>
-`
+`;
 export {
 	detailRestaurant, cardResto, createLikeButtonTemplate,
-	createLikedButtonTemplate, notFoundStatus, toasts
+	createLikedButtonTemplate, notFoundStatus, toasts,
 };
