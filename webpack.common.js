@@ -4,7 +4,7 @@ const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const path = require('path');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+// const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const {GenerateSW} = require('workbox-webpack-plugin');
 
 module.exports = {
@@ -13,29 +13,7 @@ module.exports = {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js',
 	},
-	optimization: {
-		splitChunks: {
-			chunks: 'all',
-			minSize: 20000,
-			maxSize: 70000,
-			minChunks: 1,
-			maxAsyncRequests: 30,
-			maxInitialRequests: 30,
-			automaticNameDelimiter: '~',
-			enforceSizeThreshold: 50000,
-				cacheGroups: {
-					defaultVendors: {
-						test: /[\\/]node_modules[\\/]/,
-						priority: -10
-					},
-					default: {
-						minChunks: 2,
-						priority: -20,
-						reuseExistingChunk: true
-					}
-				}
-		}
-	},
+
 	module: {
 		rules: [
 			{
@@ -52,8 +30,6 @@ module.exports = {
 					},
 				],
 			},
-
-
 			{
 				test: /\.(png|jpe?g|gif)$/i,
 				use: [
@@ -80,7 +56,7 @@ module.exports = {
 					globOptions: {
 						dot: true,
 						gitignore: true,
-						ignore: [ "**/icons", "**/images"],
+						ignore: [ "**/icons",],
 					},
 				},
 			],
@@ -96,11 +72,11 @@ module.exports = {
 				})
 			]
 		}),
-		new FaviconsWebpackPlugin({
-			logo: './src/public/icons/logo.svg',
-			mode:'webapp',
-			manifest: '/src/public/manifest.json',
-		}),
+		// new FaviconsWebpackPlugin({
+		// 	logo: './src/public/icons/logo.svg',
+		// 	mode:'webapp',
+		// 	manifest: '/src/public/manifest.json',
+		// }),
 
 		new GenerateSW(),
 	],

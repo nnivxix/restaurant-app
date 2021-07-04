@@ -1,6 +1,4 @@
 import CONFIG from '../../globals/config';
-import notFoundImgLarge from '../../../public/images/404-large.jpg';
-import notFoundImgSmall from '../../../public/images/404-small.jpg';
 
 function lengthReview(rev) {
 	if (rev.review.length > 20) {
@@ -102,25 +100,49 @@ const createLikedButtonTemplate = () => `
     <i class="bi bi-trash-fill"></i>
   </button>
 `;
-const notFoundStatus = () => `
+const emptyData = () => `
 	<div tabIndex="0" class="container-img not__found">
 		<p tabIndex="0" >Opp's, Looks like you haven't saved your favorite restaurant data.</p>
-
-		<picture>
-			<source class="lazyload" media="(max-width: 600px)" srcset="${notFoundImgSmall}">
-			<img src="${notFoundImgLarge}" alt="notfound image">
-		</picture>
+			<img src="./images/empty-large.jpg" alt="empty image">
+		<p tabIndex="0" style="text-align:center;">please, back to <a href="/#" >home</a>.</p>
 	</div>
 `;
 
-const toasts = (ctn, icon, msg) => `
-	<div class="toast__container ${ctn}">
-		<i class="${icon} bi bi-x-circle-fill"></i>
-		<p class="message">${msg}</p>
-		<i class="bi bi-x-lg close__x"></i>
+const notFoundData = () => `
+	<div tabIndex="0" class="container-img not__found">
+		<p tabIndex="0" >Opp's, The Datas can't load, please <a href="https://twitter.com/nnivxix" target="_blank" rel="noreferrer">contact us </a>.</p>
+    <picture>
+      <source media="(max-width: 600px)" srcset="./images/notfound-small.jpg" type="image/jpeg">
+			<img src="./images/notfound-large.jpg" alt="notfound image">
+    </picture>
+
+
 	</div>
 `;
+
+const createToast = (ctn, icon, msg) =>
+	`<div class="toast__container  ${ctn}">
+			<i class="${icon} bi "></i>
+			<p class="message">${msg}</p>
+		</div>
+	`;
+
+
+const loader = {
+	show(){
+		return`
+			<div class="box">
+				<div class="loader"></div>
+			</div>
+		`
+	},
+	hide(){
+		document.querySelector('.box').remove();
+
+	}
+}
+;
 export {
 	detailRestaurant, cardResto, createLikeButtonTemplate,
-	createLikedButtonTemplate, notFoundStatus, toasts,
+	createLikedButtonTemplate, emptyData,notFoundData, createToast, loader
 };

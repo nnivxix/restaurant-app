@@ -1,5 +1,5 @@
 import FavoriteRestoIdb from '../../data/database-resto';
-import { cardResto, notFoundStatus } from '../templates/template-creator';
+import { cardResto, emptyData, loader} from '../templates/template-creator';
 
 const Favorites = {
 	async render() {
@@ -7,7 +7,7 @@ const Favorites = {
     <div class="content">
       <h2 class="detail__title">Your Liked Restaurant</h2>
       <div id="restos" class="catalogs">
- 
+      ${loader.show()}
       </div>
     </div>`;
 	},
@@ -15,8 +15,9 @@ const Favorites = {
 	async afterRender() {
 		const restos = await FavoriteRestoIdb.getAllRestos();
 		const restosContainer = document.querySelector('.catalogs');
+		loader.hide()
 		if (restos.length === 0) {
-			restosContainer.innerHTML = notFoundStatus();
+			restosContainer.innerHTML = emptyData();
 		} else {
 			restos.forEach((restaurant) => {
 				restosContainer.innerHTML += cardResto(restaurant);

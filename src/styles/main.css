@@ -86,6 +86,10 @@ nav{
 	transform: translateX(10px) !important;
 }
 
+main{
+	display: flex;
+	flex-direction: column;
+}
 /*hero*/
 .hero {
 	background: url("../public/images/hero-image_2-small.jpg");
@@ -249,6 +253,7 @@ footer p {
 .review .description__review{
 	font-weight: 400;
 	padding: 8px;
+	word-wrap: break-word;
 }
 .review .date__review{
 	font-size: 0.8em;
@@ -344,17 +349,19 @@ footer p {
 /*toast*/
 .toast__container{
 	display: none;
-	width: 90%;
+	width: 80%;
+	font-size: 14px;
 	background-color: #fff;
 	color: dimgray;
 	box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.2);
 	justify-content: center;
+	justify-self: center;
 	position: fixed;
 	bottom: 20px;
 	right: 12%;
 }
 .toast__display{
-	display: flex;
+	display: flex !important;
 }
 .bi{
 	align-self: center;
@@ -374,13 +381,6 @@ footer p {
 	border-left: 5px solid #DA1212;
 }
 
-.close__x{
-	align-self: center;
-	padding: 0 10px;
-	color: #878787;
-	cursor: pointer;
-	font-size: 15px;
-}
 
 .fade-in {
 	opacity: 1;
@@ -418,6 +418,72 @@ footer p {
 
 
 
+/*loader*/
+.box{
+	display: block;
+	position: relative;
+	transition: all .2s ease;
+	height: 300px;
+
+}
+
+.loader:before{
+	content: "";
+	position: absolute;
+	top: 0px;
+	height: 12px;
+	width: 12px;
+	background-color: #ffc987 !important;
+	border-radius: 12px;
+	-webkit-animation: loaderg 3s ease-in-out infinite;
+			animation: loaderg 3s ease-in-out infinite;
+}
+
+.loader{
+	position: relative;
+	width: 12px;
+	height: 12px;
+	top: 46%;
+	left: 46%;
+	border-radius: 12px;
+	background-color: #f7a440;
+}
+
+
+.loader:after{
+	content: "";
+	position: absolute;
+	top: 0px;
+	height: 12px;
+	width: 12px;
+	background-color: #ffc987 !important;
+	border-radius: 12px;
+	-webkit-animation: loaderd 3s ease-in-out infinite;
+			animation: loaderd 3s ease-in-out infinite;
+}
+
+@-webkit-keyframes loaderg{
+	0%{	left: -25px;   }
+	50%{ left: 0px;  }
+	100%{ left:-25px;   }
+}
+@keyframes loaderg{
+	0%{	left: -25px;   }
+	50%{ left: 0px;  }
+	100%{ left:-25px;   }
+}
+
+
+@-webkit-keyframes loaderd{
+	0%{	left: 25px;   }
+	50%{ left: 0px;  }
+	100%{ left:25px;   }
+}
+@keyframes loaderd{
+	0%{	left: 25px;   }
+	50%{ left: 0px;  }
+	100%{ left:25px;   }
+}
 
 
 
@@ -507,6 +573,10 @@ footer p {
 	.toast__container{
 		width: 35%;
 		right: 35%;
+	}
+	.box{
+		grid-column-start: 1;
+	    grid-column-end: 3;
 	}
 }
 
@@ -612,6 +682,10 @@ footer p {
 		width: 100%;
 		grid-column-start: 1;
     grid-column-end: 4;
+	}
+	.box{
+		grid-column-start: 1;
+	    grid-column-end: 4;
 	}
 }
 
