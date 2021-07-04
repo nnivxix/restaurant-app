@@ -1,6 +1,6 @@
 import UrlParser from '../../routes/url-parser';
 import restaurantSource from '../../data/restaurant-source';
-import { detailRestaurant, createToast, loader} from '../templates/template-creator';
+import { detailRestaurant, createToast, loader } from '../templates/template-creator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
@@ -22,7 +22,7 @@ const Detail = {
 		const url = UrlParser.parseActiveUrlWithoutCombiner();
 		const restaurant = await restaurantSource.detailRestaurant(url.id);
 		const detail = document.querySelector('.detail__restaurant');
-		loader.hide()
+		loader.hide();
 		detail.innerHTML = detailRestaurant(restaurant);
 		LikeButtonInitiator.init({
 			likeButtonContainer: document.querySelector('#likeButtonContainer'),
@@ -47,33 +47,28 @@ const Detail = {
 		const err = document.querySelector('.err');
 		const ch = document.querySelector('.ch');
 
-
-
-
-
 		btnReview.addEventListener('click', (e) => {
 			e.stopPropagation();
 			if (nameReview.value === '' || textReview.value === '') {
-				err.classList.add('toast__display')
+				err.classList.add('toast__display');
 
-				setTimeout(()=>{
-					err.classList.remove('toast__display')
-				}, 3000)
+				setTimeout(() => {
+					err.classList.remove('toast__display');
+				}, 3000);
 			} else {
 				restaurantSource.postReview({
 					id: restaurant.id,
 					name: nameReview.value,
 					review: textReview.value,
 				});
-				ch.classList.add('toast__display')
+				ch.classList.add('toast__display');
 
-				setTimeout(()=>{
-					ch.classList.remove('toast__display')
-				}, 3000)
+				setTimeout(() => {
+					ch.classList.remove('toast__display');
+				}, 3000);
 
 				nameReview.value = '';
 				textReview.value = '';
-				location.reload()
 			}
 		});
 	},

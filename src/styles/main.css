@@ -252,7 +252,7 @@ footer p {
 }
 .review .description__review{
 	font-weight: 400;
-	padding: 8px;
+	padding: 13px;
 	word-wrap: break-word;
 }
 .review .date__review{
@@ -667,7 +667,7 @@ footer p {
 	}
 	.reviews .list{
 		flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
     flex-direction: row;
 	}
 	.review{

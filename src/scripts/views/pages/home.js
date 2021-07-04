@@ -18,20 +18,16 @@ const Home = {
 	async afterRender() {
 		// Fungsi ini akan dipanggil setelah render()
 		const resto = await restaurantSource.getRestaurant();
-		const getAllRestaurants = await resto.restaurants;
 		const catalogs = document.querySelector('.catalogs');
-		console.log({resto, getAllRestaurants});
 
-		if (resto.error){
-			catalogs.innerHTML = notFoundData()
+		if (resto.error) {
+			catalogs.innerHTML = notFoundData();
 		} else {
 			resto.restaurants.forEach((restaurant) => {
 				catalogs.innerHTML += cardResto(restaurant);
 			});
-			loader.hide()
+			loader.hide();
 		}
-
-
 	},
 };
 

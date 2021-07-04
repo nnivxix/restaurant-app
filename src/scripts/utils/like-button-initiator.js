@@ -1,5 +1,5 @@
 import FavoriteRestoIdb from '../data/database-resto';
-import { createLikeButtonTemplate, createLikedButtonTemplate, /*toasts*/ } from '../views/templates/template-creator';
+import { createLikeButtonTemplate, createLikedButtonTemplate } from '../views/templates/template-creator';
 
 const LikeButtonInitiator = {
 	async init({ likeButtonContainer, resto }) {
@@ -28,11 +28,6 @@ const LikeButtonInitiator = {
 		likeButton.addEventListener('click', async () => {
 			await FavoriteRestoIdb.putResto(this._resto);
 			this._renderButton();
-
-			// document.querySelector('#content').innerHTML += toasts("ch toast__display","check bi-check-circle-fill", "Sip, restoran sudah ditambahkan")
-			// setTimeout(function(){
-			// 	document.querySelector('.toast__display').classList.remove('toast__display')
-			// }, 2000)
 		});
 	},
 
@@ -42,11 +37,6 @@ const LikeButtonInitiator = {
 		likeButton.addEventListener('click', async () => {
 			await FavoriteRestoIdb.deleteResto(this._resto.id);
 			this._renderButton();
-
-			// document.querySelector('#content').innerHTML += toasts("err toast__display","error bi-x-circle-fill", "Sip, restoran sudah dihapus")
-			// setTimeout(function(){
-			// 	document.querySelector('.toast__display').classList.remove('toast__display')
-			// }, 2000)
 		});
 	},
 

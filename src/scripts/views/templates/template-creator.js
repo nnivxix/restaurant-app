@@ -81,7 +81,7 @@ const cardResto = (restaurant) => `
 		<figcaption class="caption">
 		<h1> <a class="cta__restaurant" href="/#/detail/${restaurant.id}">${restaurant.name}</a></h1>
 		<ul class="detail__card">
-		<li class="rate"><i class="star bi bi-star-fill"></i> ${restaurant.rating}  |  </li>
+		<li class="rate"><i class="star bi bi-star-fill"></i> ${restaurant.rating}  </li>
 		<li class="city"><i class="geo bi bi-geo-alt-fill"></i> ${restaurant.city}</li>
 		</ul>
 		<p class="desc">${restaurant.description.substring(0, 96)}...</p>
@@ -120,29 +120,25 @@ const notFoundData = () => `
 	</div>
 `;
 
-const createToast = (ctn, icon, msg) =>
-	`<div class="toast__container  ${ctn}">
+const createToast = (ctn, icon, msg) => `<div class="toast__container  ${ctn}">
 			<i class="${icon} bi "></i>
 			<p class="message">${msg}</p>
 		</div>
 	`;
 
-
 const loader = {
-	show(){
-		return`
+	show() {
+		return `
 			<div class="box">
 				<div class="loader"></div>
 			</div>
-		`
+		`;
 	},
-	hide(){
+	hide() {
 		document.querySelector('.box').remove();
-
-	}
-}
-;
+	},
+};
 export {
 	detailRestaurant, cardResto, createLikeButtonTemplate,
-	createLikedButtonTemplate, emptyData,notFoundData, createToast, loader
+	createLikedButtonTemplate, emptyData, notFoundData, createToast, loader,
 };

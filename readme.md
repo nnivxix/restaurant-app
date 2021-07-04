@@ -52,8 +52,8 @@
 - [ ]  ~WebSocket dan Notification~
 
 ### Saran Submission 2
-- [ ] Menggunakan icon berukuran **512px** untuk splash screen.
-- [ ] Icons pada _manifest.json_ sebaiknya mempunyai properti purpose dengan **value maskable** atau **any maskable**. Gunakan tool pada [maskable editor](https://maskable.app/editor).
+- [x] Menggunakan icon berukuran **512px** untuk splash screen.
+- [x] Icons pada _manifest.json_ sebaiknya mempunyai properti purpose dengan **value maskable** atau **any maskable**. Gunakan tool pada [maskable editor](https://maskable.app/editor).
 
 ![nav menu](https://dicodingacademy.blob.core.windows.net/academies/20210611051059ffd886d9a5677df3366adca6d61f815a.png)
 
@@ -65,9 +65,9 @@
 
 - [x] Lakukan fiksasi otomatis dengan command `npx eslint ./src --fix` .
 
-- [ ] Sebaiknya tambahkan indikator loading atau skeleton ui ketika web app kamu sedang memuat data dari API.  Untuk skeleton UI, kamu bisa lihat pada artikel berikut : [skeleton screen](https://css-tricks.com/building-skeleton-screens-css-custom-properties/).
+- [x] Sebaiknya tambahkan indikator loading atau skeleton ui ketika web app kamu sedang memuat data dari API.  Untuk skeleton UI, kamu bisa lihat pada artikel berikut : [skeleton screen](https://css-tricks.com/building-skeleton-screens-css-custom-properties/).
 
-- [ ] Sebaiknya tampilkan juga error ketika web app gagal memuat data dari API.
+- [x] Sebaiknya tampilkan juga error ketika web app gagal memuat data dari API.
 
 ## Submissin 3
 ### Req or features

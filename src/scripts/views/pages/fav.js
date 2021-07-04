@@ -1,5 +1,5 @@
 import FavoriteRestoIdb from '../../data/database-resto';
-import { cardResto, emptyData, loader} from '../templates/template-creator';
+import { cardResto, emptyData, loader } from '../templates/template-creator';
 
 const Favorites = {
 	async render() {
@@ -15,7 +15,7 @@ const Favorites = {
 	async afterRender() {
 		const restos = await FavoriteRestoIdb.getAllRestos();
 		const restosContainer = document.querySelector('.catalogs');
-		loader.hide()
+		loader.hide();
 		if (restos.length === 0) {
 			restosContainer.innerHTML = emptyData();
 		} else {
