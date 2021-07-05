@@ -301,6 +301,7 @@ footer p {
 	border-radius: 4px;
 	border: 1px solid #dddddd;
 	padding: 10px;
+	font-family: inherit;
 
 }
 .input__review{
@@ -309,6 +310,8 @@ footer p {
 	border-radius: 4px;
 	border: 1px solid #dddddd;
 	padding: 12px 10px;
+	width: auto;
+	font-family: inherit;
 }
 .submit__review{
 	align-self: flex-end;

@@ -1,3 +1,12 @@
+![Foodlive](./src/public/icons/fooodlive.jpg)
+
+![Netlify](https://img.shields.io/netlify/6b57fae1-b97b-4235-affb-e524fc336e7c?label=netlify&logo=netlify?style=flat-square)
+![GitHub top language](https://img.shields.io/github/languages/top/nnivxix/restaurant-app?style=flat-square)
+
+![GitHub repo size](https://img.shields.io/github/repo-size/nnivxix/restaurant-app?style=flat-square)
+
+![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/nnivxix/restaurant-app/refactor?style=flat-square) ![Website](https://img.shields.io/website?style=flat-square&up_message=online&url=https%3A%2F%2Ffoodlive.vercel.app) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/nnivxix/restaurant-app/refactor?style=flat-square) ![GitHub deployments](https://img.shields.io/github/deployments/nnivxix/restaurant-app/production?style=flat-square) ![W3C Validation](https://img.shields.io/w3c-validation/html?preset=HTML%2C%20SVG%201.1%2C%20MathML%203.0&style=flat-square&targetUrl=https://foodlive.netlify.app) ![Twitter Follow](https://img.shields.io/twitter/follow/nnivxix?style=social)
+
 # Restaurant App
 
 
