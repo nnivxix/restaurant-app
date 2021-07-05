@@ -1,1 +1,2 @@
-https://foodlive.vercel.app/#
+https://foodlive.vercel.app/
+https://foodlive.netlify.app/
