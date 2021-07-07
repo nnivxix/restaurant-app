@@ -35,7 +35,7 @@ function drinkRestaurant(restaurant) {
 }
 
 const detailRestaurant = (restaurant) => `
-		<img tabindex="0" class="lazyload" src="${CONFIG.BASE_IMAGE_URL_MD + restaurant.pictureId}" alt="${restaurant.name}" class="img__restaurant">
+		<img tabindex="0" class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL_MD + restaurant.pictureId}" alt="${restaurant.name}" class="img__restaurant">
 		<h1 tabindex="0" class="name__restaurant">${restaurant.name}</h1>
 		<h2 tabindex="0" class="location__restaurant"><i class="geo bi bi-geo-alt-fill"></i> ${restaurant.city}, ${restaurant.address}</h2>
 		<h2 tabindex="0" class="rate__restaurant"><i class="star bi bi-star-fill"></i> ${restaurant.rating}</h2>
@@ -75,7 +75,7 @@ const cardResto = (restaurant) => `
 	<figure tabIndex="0" class="card">
 		<picture>
 			<source class="lazyload" media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_URL_MD + restaurant.pictureId}">
-			<img class="img_card lazyload" src="${CONFIG.BASE_IMAGE_URL_LG + restaurant.pictureId}" alt="${restaurant.name}">
+			<img class="img_card lazyload" data-src="${CONFIG.BASE_IMAGE_URL_LG + restaurant.pictureId}" alt="${restaurant.name}">
 		</picture>
 
 		<figcaption class="caption">

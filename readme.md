@@ -110,3 +110,5 @@
 
 
 5. **Pertahankan syarat yang ada pada submission sebelumnya**. Seperti penerapan PWA, responsibilitas tampilan, dan aksesibilitas pada website.
+
+Poin Revisi Submission Bisa Dilihat [disini](./revisi.md)

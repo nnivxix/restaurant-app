@@ -15,6 +15,7 @@ const Favorites = {
 	async afterRender() {
 		const restos = await FavoriteRestoIdb.getAllRestos();
 		const restosContainer = document.querySelector('.catalogs');
+		console.log(restos)
 		loader.hide();
 		if (restos.length === 0) {
 			restosContainer.innerHTML = emptyData();

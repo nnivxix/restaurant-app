@@ -13,7 +13,6 @@ Scenario('liking a resto', async ({ I }) => {
 	I.click('#likeButton');
 
 	I.amOnPage('/#/fav');
-	pause();
 
 	I.seeElement('.catalogs');
 	const likedRestoTitle = await I.grabTextFrom('.cta__restaurant');
@@ -22,5 +21,5 @@ Scenario('liking a resto', async ({ I }) => {
 	I.click('#likeButton');
 
 	I.amOnPage('/#/fav');
-	pause();
+
 });
