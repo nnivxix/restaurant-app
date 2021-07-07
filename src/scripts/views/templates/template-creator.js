@@ -61,7 +61,7 @@ const detailRestaurant = (restaurant) => `
 		<section class="add__review">
 			<h1>Tambah review dulu boleh? </h1>
 			<input type="text" placeholder="Hanasa" class="name__reviewer">
-			<textarea type="text" placeholder="Makanannya Enak!" class="input__review"></textarea>
+			<input type="text" placeholder="Makanannya Enak!" class="input__review">
 			<input type="button" value="add review" class="submit__review">
 		</section>
 		<article tabindex="0" class="reviews">

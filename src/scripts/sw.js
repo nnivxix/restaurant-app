@@ -3,7 +3,7 @@ import { precacheAndRoute } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
 import { CacheFirst, StaleWhileRevalidate } from 'workbox-strategies';
 import { ExpirationPlugin } from 'workbox-expiration';
-import CONFIG from './globals/config'
+import CONFIG from './globals/config';
 /*
 	import CacheHelper from './utils/cache-helper';
 
@@ -27,10 +27,8 @@ precacheAndRoute([
 	// { url: './0.bundle.js', revision: null },
 	// { url: './1.bundle.js', revision: null },
 	{ url: './index.html', revision: '2' },
-	{ url: './manifest.json', revision: null}
+	{ url: './manifest.json', revision: null },
 ]);
-
-
 
 registerRoute(
 	/\.(?:png|gif|jpg|jpeg|svg)$/,
@@ -47,5 +45,5 @@ registerRoute(
 
 registerRoute(
 	new RegExp(CONFIG.BASE_URL),
-	new StaleWhileRevalidate()
-	)
+	new StaleWhileRevalidate(),
+);
