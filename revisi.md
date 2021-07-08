@@ -3,7 +3,7 @@
 - [x] Hapus `pause()` method pada saat menjalankan e2e.
 - [x] Gunakan  `data-src` sebagai pengganti attribut `src` pada tag `<img>` pada saat lazyload.
 - [x] Tambahkan ukuran gambar yang jelas.
-- [ ] Nyalakan Bundle Analyzer saat penyerahan submission.
+- [x] Nyalakan Bundle Analyzer saat penyerahan submission.
 - [x] Menyimpan Cache `{data restaurants}` dari API.
 - [x] Masukan `manifest.json` ke bagian cache.
 - [x] Ada beberapa element yang belum memiliki ukuran **44x44px.**
